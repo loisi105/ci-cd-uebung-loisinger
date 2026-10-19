@@ -8,8 +8,8 @@
 
 ## 3 Fakten
 
-1. Auf Stühlen kann man sitzen
-1. Auf Stühlen kann man stehen
-1. Auf Stühlen kann man sich drehen
+1. Auf Stühlen kann ich am besten sitzen
+1. Auf Stühlen kann ich am besten stehen
+1. Auf Stühlen kann ich mich am besten drehen
 
 ## CI/CD ist für mich relevant, um so wenig wie möglich selbst machen zu müssen.
