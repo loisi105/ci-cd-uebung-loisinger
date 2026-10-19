@@ -21,6 +21,20 @@ class CalculatorTest {
     }
 
     @Test
+    void add_withNegativeNumbers_shouldSumCorrectly() {
+        Calculator c = new Calculator();
+        assertEquals(-5, c.add(-2, -3));
+        assertEquals(1, c.add(-2, 3));
+    }
+
+    @Test
+    void subtract_shouldReturnDifference() {
+        Calculator c = new Calculator();
+        assertEquals(7, c.subtract(10, 3));
+        assertEquals(-7, c.subtract(3, 10));
+    }
+
+    @Test
     void divide_byZero_shouldReturnZero_currentBehavior() {
         Calculator c = new Calculator();
         // Aktuelles (schlechtes) Verhalten absichtlich bestätigt – Refactoring in Ü2
