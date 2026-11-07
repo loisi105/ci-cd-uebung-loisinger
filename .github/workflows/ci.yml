@@ -54,6 +54,14 @@ jobs:
           path: target/surefire-reports/
           if-no-files-found: warn
 
+      - name: Upload JaCoCo coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report-${{ matrix.os }}-jdk${{ matrix.java }}
+          path: target/site/jacoco/
+          if-no-files-found: warn
+
   sonarcloud:
     name: SonarCloud analysis
     # Needs the secret, which is not available to PRs from forks
@@ -87,3 +95,4 @@ jobs:
           -Dsonar.host.url=https://sonarcloud.io
           -Dsonar.organization=loisi105
           -Dsonar.projectKey=loisi105_ci-cd-uebung-loisinger
+          -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml
